@@ -2,17 +2,17 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.patterns.factory.grafik.LabyrinthFX;
+import com.patterns.factory.grafic.MazeFX;
 
-public class LabyrinthApp extends Application {
+public class MazeApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        LabyrinthFX factoryPatternGridPaneImplementation = new LabyrinthFX("MUSTER_B");
+        MazeFX factoryPatternGridPaneImplementation = new MazeFX("DESIGN_B");
 
         Scene scene = factoryPatternGridPaneImplementation.createLabyrinthScene();
 
-        primaryStage.setTitle("Labyrinth");
+        primaryStage.setTitle("MAZE FACTORY PATTERN EXAMPLE");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
