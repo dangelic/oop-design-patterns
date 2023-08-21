@@ -1,14 +1,16 @@
+
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import com.patterns.factory.grafik.LabyrinthFX;
 
 public class LabyrinthApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Pane root = new Pane();
-        Scene scene = new Scene(root, 800, 600);
+        LabyrinthFX factoryPatternGridPaneImplementation = new LabyrinthFX("MUSTER_B");
+
+        Scene scene = factoryPatternGridPaneImplementation.createLabyrinthScene();
 
         primaryStage.setTitle("Labyrinth");
         primaryStage.setScene(scene);
